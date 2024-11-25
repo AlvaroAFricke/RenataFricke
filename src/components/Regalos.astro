@@ -1,0 +1,33 @@
+---
+---
+
+<div class="bg-stone-500 p-8 text-white flex flex-col justify-center items-center text-balance w-full">
+    <h1 class="text-2xl font-bold mb-4">Regalos</h1>
+    <p class="mb-4 text-center">Me quiero comprar un ifon asi que cualquier ayuda es bienvenida uachin.</p>
+  
+    <div id="datos" class="datos transition-opacity duration-500 opacity-0 max-h-0 overflow-hidden">
+      <p>Titular: </p> <p></p>
+      <p>CBU: </p> <p></p>
+      <p>Alias: </p> <p></p>
+    </div>
+  
+    <button id="verDatos" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">DATOS</button>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const button = document.getElementById('verDatos');
+      const datosDiv = document.getElementById('datos');
+  
+      button.addEventListener('click', function() {
+        if (datosDiv.classList.contains('opacity-0')) {
+          datosDiv.classList.remove('opacity-0');
+          datosDiv.classList.add('opacity-100', 'max-h-screen');
+        } else {
+          datosDiv.classList.add('opacity-0', 'max-h-0');
+          datosDiv.classList.remove('opacity-100', 'max-h-screen');
+        }
+      });
+    });
+  </script>
+  
