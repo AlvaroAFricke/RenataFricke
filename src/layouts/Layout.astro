@@ -1,15 +1,16 @@
 ---
+import Home from "../components/Home.astro";
+import Invitacion from "../components/Invitacion.astro";
+import Lugar from "../components/Lugar.astro";
 
-import Home from '../components/Home.astro';
-import Invitacion from '../components/Invitacion.astro';
-import Lugar from '../components/Lugar.astro'
+import Regresiva from "../components/Regresiva.astro";
+import Album from "../components/Album.astro";
+import Regalos from "../components/Regalos.astro";
 
-import Regresiva from '../components/Regresiva.astro';
-import Album from '../components/Album.astro'
-import Regalos from '../components/Regalos.astro'
+import Confirmacion from "../components/Confirmacion.astro";
+import Canciones from "../components/Canciones.astro"
 
-import Footer from '../components/Footer.astro'
-
+import Footer from "../components/Footer.astro";
 
 interface Props {
 	title: string;
@@ -25,28 +26,40 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="/src/css/main.css">
+
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body class="font-['Roboto']">
-
 		<!-- Importaciones de componentes -->
 
-		<Home></Home>
+		<Home />
 		<slot />
-		<Invitacion></Invitacion>
+		<Invitacion />
 		<slot />
-		<Regresiva></Regresiva>
+		<Regresiva />
 		<slot />
-		<Lugar></Lugar>
+		<Lugar />
 		<slot />
-		<Album></Album>
+		<Album />
 		<slot />
-		<Regalos></Regalos>
+		<Regalos />
 		<slot />
-		
-		
-		<Footer></Footer>
+		<Confirmacion />
+		<slot />
+		<Canciones />
+		<slot />
+
+		<Footer />
 
 		<!-- Fin de importaciones de componenetes -->
 
