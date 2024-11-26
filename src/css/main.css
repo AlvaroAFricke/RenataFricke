@@ -1,6 +1,7 @@
-h1,h2,p {
-    font-family: "Sevillana", cursive;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+@font-face {
+  font-family: 'MiTipografia';
+  src: url('/src/fonts/Sarina/Sarina-Regular.ttf') format('ttf'),
+       url('/src/fonts/Sevillana/Sevillana-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
