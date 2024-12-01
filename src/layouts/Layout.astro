@@ -11,6 +11,7 @@ import Confirmacion from "../components/Confirmacion.astro";
 import Canciones from "../components/Canciones.astro"
 
 import Footer from "../components/Footer.astro";
+import Codigo from "../components/Codigo.astro";
 interface Props {
 	title: string;
 }
@@ -40,6 +41,8 @@ const { title } = Astro.props;
 	<body>
 		<!-- Importaciones de componentes -->
 
+		<!-- Colores verdes claritos y oscuros para el contraste -->
+
 		<Home />
 		<slot />
 		<Invitacion />
@@ -49,6 +52,8 @@ const { title } = Astro.props;
 		<Lugar />
 		<slot />
 		<Album />
+		<slot />
+		<Codigo />
 		<slot />
 		<Regalos />
 		<slot />
